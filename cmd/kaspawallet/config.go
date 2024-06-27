@@ -314,7 +314,7 @@ func validateCreateUnsignedTransactionConf(conf *createUnsignedTransactionConfig
 	if (!conf.IsSendAll && conf.SendAmount == "") ||
 		(conf.IsSendAll && conf.SendAmount != "") {
 
-		return errors.New("exactly one of '--send-amount' or '--all' must be specified")
+		return errors.New("exactly one of '--send-amount' or '--send-all' must be specified")
 	}
 	return nil
 }
@@ -323,7 +323,7 @@ func validateSendConfig(conf *sendConfig) error {
 	if (!conf.IsSendAll && conf.SendAmount == "") ||
 		(conf.IsSendAll && conf.SendAmount != "") {
 
-		return errors.New("exactly one of '--send-amount' or '--all' must be specified")
+		return errors.New("exactly one of '--send-amount' or '--send-all' must be specified")
 	}
 	return nil
 }
